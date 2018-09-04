@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script>
+        var result ="";
+        var symbol ="";
+    </script>
+     <script>
+        function setZero(){
+             if(!result==""){
+                result = result+"0";
+                document.getElementById("num").value = result;
+            }     
+        }
+        function setOne(){
+            result = result+"1";
+            document.getElementById("num").value = result;   
+        }
+        function setTwo(){
+            result = result+"2";
+            document.getElementById("num").value = result;
+            
+        }
+        function setThree(){           
+            result = result+"3";
+            document.getElementById("num").value = result;
+           
+        }
+        function setFour(){
+            result = result+"4";
+            document.getElementById("num").value = result;
+           
+        }
+        function setFive(){
+            result = result+"5";
+            document.getElementById("num").value = result;
+           
+        }
+        function setSix(){
+            result = result+"6";
+            document.getElementById("num").value = result;
+            
+        }
+        function setSeven(){
+            result = result+"7";
+            document.getElementById("num").value = result;
+           
+        }
+        function setEight(){
+            result = result+"8";
+            document.getElementById("num").value = result; 
+        }
+        function setNine(){
+            result = result+"9";
+            document.getElementById("num").value = result; 
+        }
+        function setNull(){
+            result = "";
+            symbol = "";
+            document.getElementById("num").value = result;
+        }
+        function plus(){
+            symbol = "+";
+            result = result+"+";
+            document.getElementById("num").value = result;
+        }
+        function minus(){
+            symbol = "-";
+            result = result+"-";
+            document.getElementById("num").value = result; 
+        }
+        function mul(){
+            symbol = "*";
+            result = result+"*";
+            document.getElementById("num").value = result;
+            
+        }
+        function div(){
+            symbol = "/";
+            result = result+"/";
+            document.getElementById("num").value = result;
+        }
+        function setSum(){
+            try{
+                document.getElementById("num").value = eval(result);
+            }catch(e){
+                alert(e);
+            }
+        }
+
+
+    </script>
+</head>
+<body style="background-color:rgb(255, 204, 153)">
+    
+    <div class="box">
+        <h2>Calculator</h2>
+        <form class="flex-buttons" id="form1">
+            <input class ="input" id="num" placeholder="0">
+        </form>
+   
+        <button class="button" id="7" onclick="setSeven()">7</button> 
+        <button class="button" id="8" onclick="setEight()">8</button>
+        <button class="button" id="9" onclick="setNine()">9</button>
+        <button class="button" id="c" onclick="setNull()">C</button>
+        <br>
+        <button class="button" id="4" onclick="setFour()">4</button>
+        <button class="button" id="5" onclick="setFive()">5</button> 
+        <button class="button" id="6" onclick="setSix()">6</button> 
+        <button class="button" id="/" onclick="div()">/</button>
+        <br> 
+        <button class="button" id="1" onclick="setOne()">1</button>
+        <button class="button" id="2" onclick="setTwo()">2</button> 
+        <button class="button" id="3" onclick="setThree()">3</button> 
+        <button class="button" id="*" onclick="mul()">X</button>
+        <br> 
+        <button class="button" id="0" onclick="setZero()">0</button>
+        <button class="button" id="+" onclick="plus()">+</button> 
+        <button class="button" id="-" onclick="minus()">-</button> 
+        <button class="button" id="=" onclick="setSum()">=</button> <br> 
+        <img class="photo" src="photo/cartoon.png" >
+    </div>
+    <div>
+
+</body>
+</html>
